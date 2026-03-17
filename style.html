@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+<style>
+.highlight {
+  background: yellow;
+}
+.dark {
+  background: black;
+  color: white;
+}
+</style>
+
+</head>
+<body>
+
+<h2>Style Manipulation</h2>
+
+<div id="box">Hello World</div><br>
+
+<button id="btn1">Add Class</button>
+<button id="btn2">Remove Class</button>
+<button id="btn3">Toggle Class</button>
+
+<script>
+
+$("#btn1").click(()=>{
+  $("#box").addClass("highlight");
+});
+
+$("#btn2").click(()=>{
+  $("#box").removeClass("highlight");
+});
+
+$("#btn3").click(()=>{
+  $("#box").toggleClass("dark");
+});
+
+</script>
+
+</body>
+</html>

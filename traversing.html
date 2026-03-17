@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+
+<h2>Traversing</h2>
+
+<ul id="list">
+  <li>Item 1</li>
+  <li id="item">Item 2</li>
+  <li>Item 3</li>
+</ul>
+
+<button id="btn">Traverse</button>
+
+<script>
+
+$("#btn").click(function(){
+
+  $("#item").parent().css("border","2px solid red");
+  $("#item").siblings().css("background","yellow");
+  $("#item").next().css("color","blue");
+  $("#item").prev().css("color","green");
+
+});
+
+</script>
+
+</body>
+</html>

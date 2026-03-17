@@ -1,1 +1,41 @@
-$("p:first").css("color", "red");
+<!DOCTYPE html>
+<html>
+<head>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+
+<h2>Selectors</h2>
+
+<p>Paragraph 1</p>
+<p class="test">Paragraph 2</p>
+<p id="demo">Paragraph 3</p>
+
+<ul>
+  <li>Item 1</li>
+  <li>Item 2</li>
+  <li>Item 3</li>
+</ul>
+
+<button id="btn">Run Selectors</button>
+
+<script>
+$("#btn").click(function(){
+
+  // Basic
+  $("p").css("color","blue");
+  $("#demo").css("background","yellow");
+  $(".test").hide();
+
+  // Filter
+  $("li:first").css("color","red");
+  $("li:last").css("color","green");
+  $("li:eq(1)").css("background","pink");
+  $("li:even").css("font-weight","bold");
+  $("li:odd").css("font-style","italic");
+
+});
+</script>
+
+</body>
+</html>

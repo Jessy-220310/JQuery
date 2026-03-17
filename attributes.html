@@ -1,3 +1,37 @@
-$("#img").attr("src", "new.jpg");
-$("#input").val();
-$("#check").prop("checked", true);
+<!DOCTYPE html>
+<html>
+<head>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+
+<h2>Attributes</h2>
+
+<img id="img" src="https://via.placeholder.com/100"><br><br>
+
+<input type="text" id="input" value="Hello"><br><br>
+
+<input type="checkbox" id="check"> Check me<br><br>
+
+<button id="btn">Test Attributes</button>
+
+<script>
+$("#btn").click(function(){
+
+  // attr()
+  $("#img").attr("src","https://via.placeholder.com/200");
+
+  // val()
+  alert("Input value: " + $("#input").val());
+
+  // prop()
+  $("#check").prop("checked", true);
+
+  // removeAttr()
+  $("#img").removeAttr("width");
+
+});
+</script>
+
+</body>
+</html>

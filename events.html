@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+
+<h2>Events</h2>
+
+<button id="btn">Click Me</button><br><br>
+<input type="text" id="input"><br><br>
+
+<form id="form">
+  <input type="text" placeholder="Name">
+  <button type="submit">Submit</button>
+</form>
+
+<script>
+
+// Mouse events
+$("#btn").click(()=>alert("Click"));
+$("#btn").dblclick(()=>alert("Double Click"));
+$("#btn").mouseenter(()=>console.log("Mouse Enter"));
+$("#btn").mouseleave(()=>console.log("Mouse Leave"));
+$("#btn").mousedown(()=>console.log("Mouse Down"));
+$("#btn").mouseup(()=>console.log("Mouse Up"));
+
+// Keyboard events
+$("#input").keypress(()=>console.log("Key Press"));
+$("#input").keydown(()=>console.log("Key Down"));
+$("#input").keyup(()=>console.log("Key Up"));
+
+// Form events
+$("#form").submit(function(e){
+  e.preventDefault();
+  alert("Form Submitted");
+});
+
+$("#input").focus(function(){
+  $(this).css("background","yellow");
+});
+
+$("#input").blur(function(){
+  $(this).css("background","white");
+});
+
+// on/off
+$("#btn").on("click", function(){
+  console.log("Using ON");
+});
+
+</script>
+
+</body>
+</html>
